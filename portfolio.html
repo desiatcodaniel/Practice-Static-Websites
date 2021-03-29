@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Personal Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/portfolio.css" />
+  </head>
+
+  <body>
+    <div class="top-effect"></div>
+    <nav id="navbar">
+      <a class="nav-link" href="#welcome-section">About</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+
+    <main class="container">
+      <!--ABOUT-->
+      <section class="header section" id="welcome-section">
+        <!-- 2fr/5fr of welcome section (Dev Information)-->
+        <div class="profile">
+          <!--This is the circle to insert the profile picture-->
+          <div id="developer"></div>
+
+          <!--This is the personal details of the dev-->
+          <div id="developer-details">
+            <h1 class="type-effect">Daniel Ryan Desiatco</h1>
+            <h4 class="type-effect">Web Developer</h4>
+          </div>
+        </div>
+
+        <!--3fr/5fr of the welcome section (Greetings should be here)-->
+        <div class="greet">
+          <h3 class="type-effect">Turn your ideas into products</h3>
+        </div>
+      </section>
+      <!--END ABOUT-->
+
+      <!--PROJECTS-->
+      <section class="project-sect section" id="projects">
+        <!--Project title-->
+        <h2 id="title">Projects are found here</h2>
+        <!--3/5fr for the main project-->
+        <div class="item" id="main-project">
+          <div class="project">
+            <h3>Product Landing Page</h3>
+            <a
+              href="https://codepen.io/desiatcodaniel/full/OJPwdeg"
+              target="_blank"
+            >
+              <img
+                class="project-tile"
+                src="https://i.imgur.com/7G8dJZY.png"
+                alt="Product Landing Snap"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!--2/5fr for-->
+        <div class="item" id="project2">
+          <div class="project">
+            <h3>Survey Form</h3>
+            <a
+              href="https://codepen.io/desiatcodaniel/full/qBEoNPY"
+              target="_blank"
+            >
+              <img
+                class="project-tile"
+                src="https://i.imgur.com/9xjlXEx.png"
+                alt="Survey Form Snap"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="item" id="project3">
+          <div class="project">
+            <h3>Tribute Page</h3>
+            <a
+              href="https://codepen.io/desiatcodaniel/full/abzVpMe"
+              target="_blank"
+            >
+              <img
+                class="project-tile"
+                src="https://i.imgur.com/KmxKvHN.png"
+                alt="Tribute Page Snap"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--END PROJECTS-->
+    </main>
+    <footer>
+      <section class="contact-sect section" id="contact">
+        <!--Contact section-->
+        <div class="contact">
+          <h2>Let's do business</h2>
+          <p>follow me and be my fan</p>
+          <div class="contact-list">
+            <a
+              href="https://twitter.com/DanielDesiatco"
+              class="btn twitter"
+              target="_blank"
+            >
+              <i class="fab fa-twitter-square fa-4x"></i
+            ></a>
+
+            <a href="" class="btn github" target="_blank"
+              ><i class="fab fa-github-alt fa-4x"></i
+            ></a>
+
+            <a href="mailto:desiatcodaniel@gmail.com" class="btn email"
+              ><i class="fas fa-envelope fa-4x"></i>
+            </a>
+          </div>
+        </div>
+        <!--END CONTACT-->
+
+        <!--FOOTER SECTION-->
+        <div class="footer">
+          <p>**This portfolio reflects my most current skill level.</p>
+          <p>
+            &copy; Created for
+            <a href="https://www.freecodecamp.org/" target="_blank"
+              >freeCodeCamp <i class="fab fa-free-code-camp"></i
+            ></a>
+          </p>
+        </div>
+        <!--END SECTION-->
+      </section>
+      <!--END FOOTER-->
+    </footer>
+    <script src="portfolio.js"></script>
+  </body>
+</html>

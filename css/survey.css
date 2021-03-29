@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("https://i.pinimg.com/originals/42/3b/cf/423bcf28440ce359d819e0e7b751f6a3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+}
+
+#title {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: .5em 1em;
+    font-size: 5em;
+    margin-bottom: .5em;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+#description {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 2em;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+#signature {
+    width: 20em;
+    height: 8em;
+}
+
+.container {
+    border-color: black;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: rgba(255, 153, 51, .6);
+    padding: 2em .1em;
+    width: 40%;
+    margin: auto;
+}
+
+.label {
+    margin-bottom: .5em;
+}
+
+.form {
+    margin-bottom: 1.5em;
+}
+
+.main-input {
+    width: 20em;
+    height: 2em;
+}

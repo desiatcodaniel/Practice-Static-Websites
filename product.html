@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  <!-- 
+  
+  Hello Camper!
+  
+  For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+  
+  - The freeCodeCamp Team 
+  
+  -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Practice Product</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+      src="https://kit.fontawesome.com/18b26bb0d2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/product.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <div id="header-title">
+        <img
+          class="logo"
+          id="header-img"
+          src="https://static.thenounproject.com/png/1122660-200.png"
+          alt="ship logo"
+        />
+        <h1 class="company-name">The Docks</h1>
+        <nav class="nav-bar" id="nav-bar">
+          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#pricing">Pricing</a>
+          <a class="nav-link" href="#contact">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="features" id="features">
+        <div class="feature-list">
+          <i class="fas fa-fighter-jet fa-4x"></i>
+          <h2>So fast you'll forget you're in a ship</h2>
+        </div>
+
+        <div class="feature-list">
+          <i class="fas fa-fingerprint fa-4x"></i>
+          <h2>
+            Millions of voice to fingerprint to toeprint security configurations
+          </h2>
+        </div>
+
+        <div class="feature-list">
+          <i class="fas fa-parachute-box fa-4x"></i>
+          <h2>Free parachute to the first 50 customers</h2>
+        </div>
+      </section>
+      <section class="features">
+        <iframe
+          width="420"
+          height="315"
+          id="video"
+          src="https://www.youtube.com/embed/osfrALLVP14"
+        >
+        </iframe>
+      </section>
+
+      <section class="features" id="pricing">
+        <div class="items">
+          <div class="card" id="card-1">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61HjjCeDVvL._SX425_.jpg"
+              alt="Thousand Sunny Ship"
+            />
+            <hr />
+            <h3>Name: Sunny</h3>
+            <h3>Speed: 250mph</h3>
+            <h3>Price: $300,000,000</h3>
+            <button class="btn" type="submit">BUY!</button>
+          </div>
+          <div class="card" id="card-2">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61HjjCeDVvL._SX425_.jpg"
+              alt="Thousand Sunny Ship"
+            />
+            <hr />
+            <h3>Name: Sunny</h3>
+            <h3>Speed: 250mph</h3>
+            <h3>Price: $300,000,000</h3>
+            <button class="btn" type="submit">BUY!</button>
+          </div>
+          <div class="card" id="card-3">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61HjjCeDVvL._SX425_.jpg"
+              alt="Thousand Sunny Ship"
+            />
+            <hr />
+            <h3>Name: Sunny</h3>
+            <h3>Speed: 250mph</h3>
+            <h3>Price: $300,000,000</h3>
+            <button class="btn" type="submit">BUY!</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us:</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <label for="email">
+            <h4>Email address:</h4>
+          </label>
+          <input
+            class="input"
+            name="email"
+            id="email"
+            type="email"
+            placeholder="Enter a valid email"
+            required
+          />
+
+          <textarea
+            class="input"
+            id="comments"
+            placeholder="Please enter suggestions/feedbacks"
+          >
+          </textarea>
+          <input
+            id="submit"
+            type="submit"
+            value="Start Sailing!"
+            class="btn input"
+          />
+        </form>
+      </section>
+    </main>
+
+    <script src="" async defer></script>
+  </body>
+</html>

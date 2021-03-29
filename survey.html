@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="css/survey.css" />
+</head>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<body>
+  <main>
+    <header>
+      <h1 id="title">One Piece Pirate Form</h1>
+
+      <p id="description">
+        Submit this form and start your adventure to Piracy!
+      </p>
+    </header>
+
+    <div class="container">
+      <form id="survey-form">
+        <div class="form">
+          <label for="name" id="name-label">
+            <h2 class="label">Pirate Name</h2>
+          </label>
+          <input class="main-input" id="name" type="text" placeholder="Name  is required" required />
+        </div>
+
+        <div class="form">
+          <label for="email" id="email-label">
+            <h2 class="label">Pirate Email</h2>
+          </label>
+          <input class="main-input" id="email" type="email" placeholder="Email is required" required />
+        </div>
+
+        <div class="form">
+          <label for="number" id="number-label">
+            <h2 class="label">Ideal Amount of Nakama</h2>
+          </label>
+          <input class="main-input" id="number" type="number" placeholder="10" min="4" max="15" required />
+        </div>
+
+        <div class="form">
+          <label for="user-swimmer">
+            <h2 class="label">Swimming Skills</h2>
+            <label for="devil-fruit">
+              <input id="devil-fruit" value="false" type="radio" name="user-swimmer" checked />
+              Devil Fruit User
+            </label>
+
+            <label for="swimmer">
+              <input id="swimmer" value="true" type="radio" name="user-swimmer" />
+              King of Swimmers
+            </label>
+        </div>
+
+        <div class="form">
+          <label for="role">
+            <h2 class="label">Role in the Ship</h2>
+          </label>
+          <select class="main-input" id="dropdown" name="role">
+            <option disabled selected value>Select role</option>
+            <option value="Food Critic">Food Critic</option>
+            <option value="Navigator">Navigator</option>
+            <option value="Musician">Musician</option>
+            <option value="Cook">Cook</option>
+            <option value="Oden">Oden</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Shipwright">Shipwright</option>
+          </select>
+        </div>
+
+        <div class="form">
+          <label for="haki">
+            <h2 class="label">Haki Abilities</h2>
+          </label>
+
+          <label class="haki" for="armament">
+            <input id="armament" value="armament" type="checkbox" name="haki" />
+            Armament Haki
+          </label>
+          <br />
+          <label class="haki" for="observation">
+            <input id="observation" value="observation" type="checkbox" name="haki" />
+            Observation Haki
+          </label>
+          <br />
+          <label class="haki" for="conqueror">
+            <input id="conqueror" value="conqueror" type="checkbox" name="haki" />
+            Drop Dead Fodders Haki
+          </label>
+        </div>
+
+        <br />
+
+        <div class="form">
+          <label for="signature">
+            <h2 class="label">Signature Line</h2>
+          </label>
+          <textarea id="signature" placeholder="I'm going to be the King of Pirates!"></textarea>
+          <br />
+        </div>
+
+        <button class="main-input" id="submit" type="submit">Start Journey!</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

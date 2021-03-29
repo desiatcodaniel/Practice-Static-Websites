@@ -1,0 +1,184 @@
+:root {
+  --main-white: wheat;
+  --main-red: #be3144;
+  --main-blue: #e1f4f3;
+  --main-gray: #383838;
+
+  --main-black: #252525;
+  --project-blue: #226491;
+  --sub-gray: #3f3f3f;
+}
+
+/*Start of styles*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: "Bebas Neue", cursive;
+  scroll-behavior: smooth;
+  background-color: var(--sub-gray);
+
+  /*disable text selection*/
+  user-select: none;
+}
+
+.container {
+  color: var(--main-blue);
+  width: 30em;
+  height: 45em;
+  margin: 5em auto;
+  padding: 1em;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "cScreen"
+    "keys"
+    "keys"
+    "keys"
+    "keys"
+    "keys";
+  border-style: solid;
+  border-color: var(--main-black);
+  border-radius: 10px;
+  background-color: var(--main-gray);
+}
+
+.screen {
+  grid-area: cScreen;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1f 1f;
+  align-items: end;
+  background-color: var(--sub-gray);
+}
+
+.screen div {
+  width: 90%;
+  justify-self: center;
+  margin: 0 10px;
+}
+
+.screen p {
+  text-align: end;
+}
+
+.problem {
+  font-size: 3em;
+}
+
+.result {
+  font-size: 7em;
+}
+
+.numbers {
+  grid-area: keys;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "ce kClr dlt kDiv"
+    "k7 k8 k9 kMinus"
+    "k4 k5 k6 kPlus"
+    "k1 k2 k3 kMult"
+    "k0 k0 kDot kEq";
+  align-items: center;
+}
+
+.key {
+  width: 90%;
+  height: 70%;
+  justify-self: center;
+  font-size: 2em;
+  border-style: outset;
+  border-color: var(--main-blue);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key span {
+  pointer-events: none;
+}
+
+.clickedKey {
+  border-style: inset;
+}
+
+#k0 {
+  grid-area: k0;
+}
+
+#k1 {
+  grid-area: k1;
+}
+
+#k2 {
+  grid-area: k2;
+}
+
+#k3 {
+  grid-area: k3;
+}
+
+#k4 {
+  grid-area: k4;
+}
+
+#k5 {
+  grid-area: k5;
+}
+
+#k6 {
+  grid-area: k6;
+}
+
+#k7 {
+  grid-area: k7;
+}
+
+#k8 {
+  grid-area: k8;
+}
+
+#k9 {
+  grid-area: k9;
+}
+
+#kPlus {
+  grid-area: kPlus;
+}
+
+#kMinus {
+  grid-area: kMinus;
+}
+
+#kMult {
+  grid-area: kMult;
+}
+
+#kDiv {
+  grid-area: kDiv;
+}
+
+#kEquals {
+  grid-area: kEq;
+}
+
+#kCe {
+  grid-area: ce;
+}
+
+#kClr {
+  grid-area: kClr;
+}
+
+#kDlt {
+  grid-area: dlt;
+}
+
+#kDot {
+  grid-area: kDot;
+}

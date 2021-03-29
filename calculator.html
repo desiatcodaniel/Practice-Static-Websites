@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Calculator</title>
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/calculator.css" />
+</head>
+
+<body class="">
+  <div class="container">
+    <!--Screen section-->
+    <section class="screen">
+      <div class="problem">
+        <p id="problemText">0</p>
+      </div>
+      <div class="result">
+        <p id="resultText">0</p>
+      </div>
+    </section>
+
+    <section class="numbers">
+      <div class="key" id="k7">
+        <span>7</span>
+      </div>
+      <div class="key" id="k8">
+        <span>8</span>
+      </div>
+      <div class="key" id="k9">
+        <span>9</span>
+      </div>
+      <div class="key" id="k4">
+        <span>4</span>
+      </div>
+      <div class="key" id="k5">
+        <span>5</span>
+      </div>
+      <div class="key" id="k6">
+        <span>6</span>
+      </div>
+      <div class="key" id="k1">
+        <span>1</span>
+      </div>
+      <div class="key" id="k2">
+        <span>2</span>
+      </div>
+      <div class="key" id="k3">
+        <span>3</span>
+      </div>
+      <div class="key" id="k0">
+        <span>0</span>
+      </div>
+
+      <div class="key" id="kMinus">
+        <span>-</span>
+      </div>
+      <div class="key" id="kPlus">
+        <span>+</span>
+      </div>
+      <div class="key" id="kMult">
+        <span>*</span>
+      </div>
+      <div class="key" id="kDiv">
+        <span>/</span>
+      </div>
+      <div class="key" id="kEquals">
+        <span>=</span>
+      </div>
+      <div class="key" id="kCe">
+        <span>ce</span>
+      </div>
+      <div class="key" id="kClr">
+        <span>c</span>
+      </div>
+      <div class="key" id="kDlt">
+        <span>del</span>
+      </div>
+      <div class="key" id="kDot">
+        <span>.</span>
+      </div>
+    </section>
+  </div>
+  <script>
+    //SET variables for calculations
+    let resultNum = 0;
+    let displayNum = 0;
+    let tempNum = "0";
+    let operation = "";
+
+    //define functions for calculations
+    //Arithmetic functions
+    const add = (num1, num2) => num1 + num2;
+
+    const subtract = (num1, num2) => num1 - num2;
+
+    const multiply = (num1, num2) => num1 * num2;
+
+    const divide = (num1, num2) => {
+      if (num2 === 0) {
+        return "cannot divide by 0";
+      } else {
+        return num1 / num2;
+      }
+    };
+    //Equal function
+    const doMath = (op, num1, num2) => {
+      switch (op) {
+        case "+":
+          return add(num1, num2);
+          break;
+        case "-":
+          return subtract(num1, num2);
+          break;
+        case "*":
+          return multiply(num1, num2);
+          break;
+        case "/":
+          return divide(num1, num2);
+          break;
+      }
+    };
+
+    //Run for clicked or keyPress event
+    function pressKey(e) {
+      //select element for problem and result
+      const problem = document.querySelector("p#problemText");
+      const result = document.querySelector("p#resultText");
+
+      //select element for valid user input
+      const input = e.target.innerText;
+
+      //Change the value on the problem section of the screen with the new input.
+      switch (input) {
+        case "ce":
+          resultNum = 0;
+          displayNum = 0;
+          tempNum = "";
+          result.innerText = "0";
+          problem.innerText = "0";
+          operation = "";
+          break;
+        case "c":
+          problem.innerText = "0";
+          break;
+        case "+":
+          operation = input;
+          problem.innerText += "+";
+          resultNum = tempNum;
+          tempNum = "";
+          break;
+        case "-":
+          operation = input;
+          problem.innerText += "-";
+          resultNum = tempNum;
+          tempNum = "";
+          break;
+        case "*":
+          operation = input;
+          problem.innerText += "*";
+          resultNum = tempNum;
+          tempNum = "";
+          break;
+        case "/":
+          operation = input;
+          problem.innerText += "/";
+          resultNum = tempNum;
+          tempNum = "";
+          break;
+        case "=":
+          console.log(operation, resultNum, tempNum);
+          if (operation != "") {
+            displayNum = doMath(
+              operation,
+              Number(resultNum),
+              Number(tempNum)
+            );
+            result.innerText = displayNum;
+            tempNum = Number(displayNum);
+            //Clear tempNum and operation to reset switch
+            operation = "";
+          }
+          break;
+        default:
+          if (problem.innerText === "0") {
+            tempNum = input;
+            problem.innerText = input;
+          } else {
+            tempNum += input;
+            problem.innerText += input;
+          }
+          console.log(resultNum);
+
+          // console.log(tempNum);
+
+          // console.log(resultNum);
+      }
+
+      //Add clicking effect
+      e.target.classList.add("clickedKey");
+      setTimeout(() => {
+        e.target.classList.remove("clickedKey");
+      }, 100);
+    }
+
+    //Select all elements with class key
+    const keys = document.querySelectorAll(".key");
+
+    //Add event listeners for each key
+    for (const key of keys) {
+      console.log(key);
+      key.addEventListener("click", pressKey);
+    }
+  </script>
+</body>
+
+</html>

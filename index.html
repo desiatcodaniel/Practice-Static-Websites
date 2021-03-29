@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Practice Website</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>HELLO!</h1>
+    <h3>Heading 3</h3>
+    <h6>Heading 6</h6>
+
+    <a href="blog.html">Go to blog</a>
+
+    <p>
+        <strong>Block level elements (Using Unordered List):</strong>
+        <ul>
+            <em>
+                <li>div</li>
+                <li>h1-h6</li>
+                <li>paragraph</li>
+                <li>form</li>
+            </em>
+        </ul>
+
+        <strong>Inline level elements (Using Ordered List):</strong>
+        <ol>
+            <em>
+                <li>span</li>
+                <li>img</li>
+                <li>a</li>
+            </em>
+        </ol>
+
+    </p>
+    <!--Margin is spacing around the element-->
+    <!--Paragraph uses 1 em margin top and bottom-->
+    <p>
+        <strong>This text is strong and should make the text stick out. </strong> Lorem ipsum dolor sit amet
+        consectetur,
+        adipisicing elit. Nulla quae dolores facere ullam, possimus delectus <em>This text is em and should be
+            emphasized. </em>
+        <a href="http://google.com" target="_blank">This is a link that goes to google target = "_blank" opens a new
+            website.</a>
+        reiciendis veritatis expedita ratione optio eveniet officia quaerat autem tempore. Dolores eligendi maxime
+        molestiae adipisci.
+    </p>
+
+    <!--Table-->
+    <!--Not used for layouts anymore. Used for tabular data-->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Daniel Desiatco</td>
+                <td>desiatcodaniel@gmail.com</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Katrina Desiatco</td>
+                <td>katrinadesiatco@gmail.com</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!--Forms-->
+    <form action="process.php" method="POST">
+        <div>
+            <label>First Name </label>
+            <input type="text" name="firstName" placeholder="Daniel">
+        </div>
+        <div>
+            <label>Last Name </label>
+            <input type="text" name="lastName" placeholder="Desiatco">
+        </div>
+        <div>
+            <label>Email </label>
+            <input type="email" name="email" placeholder="desiatcodaniel@gmail.com">
+        </div>
+        <div>
+            <label>Message </label>
+            <textarea name="message"></textarea>
+        </div>
+        <div>
+            <label>Gender </label>
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div>
+            <label>Age </label>
+            <input type="number" name="age" placeholder="24">
+        </div>
+        <div>
+            <label>Birthday </label>
+            <input type="date" name="birthday">
+        </div>
+        <br>
+        <input type="submit" name="submit" value="submit">
+    </form>
+
+    <!--Button-->
+    <button>DO NOT CLICK ME</button>
+    <br>
+    <!--Images-->
+    <img src="images/strawhat.jpg" width="100">
+
+    <!--Quotations-->
+    <blockquote cite="http://google.com">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet accusantium, corrupti autem officia
+        iure nostrum aut vero, labore molestiae ad quo expedita, amet atque provident deleniti cumque laborum dolor!
+    </blockquote>
+
+    <p>This <abbr title="HTML CSS COURSE">course</abbr> is awesome</p>
+
+    <p>HTML <cite>YOUTUBE</cite> TUTORIAL</p>
+    <script src="index.js"></script>
+    <script>
+        const list = document.createElement('ul');
+        const li1 = document.createElement('li');
+        li1.textContent = 'ONE';
+        // document.body.appendChild(list);
+        const li5 = document.createElement('li');
+        li5.textContent = "FIVE";
+        list.append(li1, li5);
+        document.body.appendChild(list);
+    </script>
+</body>
+
+</html>

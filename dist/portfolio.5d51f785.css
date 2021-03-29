@@ -1,0 +1,244 @@
+/*Variables*/
+:root {
+  --main-white: wheat;
+  --main-red: #be3144;
+  --main-blue: #e1f4f3;
+  --main-gray: #383838;
+  --main-black: #252525;
+  --project-blue: #226491;
+}
+
+/*Start of styles*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: "Bebas Neue", cursive;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+/*NAVIGATION PANEL*/
+.top-effect {
+  height: 2vh;
+  max-width: 100%;
+  background-color: var(--main-gray);
+}
+
+#navbar {
+  background-color: var(--main-gray);
+  padding-top: 2vh;
+  position: sticky;
+  top: 0;
+  max-width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#navbar a {
+  font-size: 2rem;
+  margin-right: 1.5em;
+  color: var(--main-white);
+  text-decoration: none;
+}
+
+#navbar a:visited {
+  color: var(--main-white);
+}
+
+#navbar a:hover {
+  color: #e1f4f3;
+}
+
+.nav-link {
+  margin-right: 1.5rem;
+}
+
+/*MAIN BODY*/
+
+.section {
+  min-height: 93vh;
+  width: 100vw;
+  max-width: 100%;
+  padding-top: 4vh;
+}
+
+/* Portfolio header (Profile Picture + Greetings)*/
+.header {
+  color: var(--main-gray);
+  background-color: var(--main-gray);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: "item1 item2";
+}
+
+.profile {
+  grid-area: item1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-white);
+}
+
+#developer {
+  background: #383838;
+  border-radius: 50%;
+  min-width: 30vmin;
+  height: 30vmin;
+  margin-bottom: 1vmin;
+}
+
+.greet {
+  grid-area: item2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-blue);
+}
+
+/* Project showcase */
+.project-sect {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "project1 project2"
+    "project1 project3";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 3fr 3fr;
+  background: var(--project-blue);
+  color: var(--main-black);
+}
+
+#title {
+  grid-area: title;
+  text-align: center;
+  align-self: center;
+  text-decoration: underline overline;
+  font-size: 2rem;
+}
+
+.item {
+  border-style: double;
+  border-color: var(--main-black);
+  padding: 1em;
+}
+
+#main-project {
+  grid-area: project1;
+}
+
+.project {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.project img {
+  width: 85%;
+}
+
+.project-tile {
+  border-radius: 5px;
+  border-style: groove;
+  border-color: var(--main-black);
+  max-width: 100%;
+}
+
+#project2 {
+  grid-area: project2;
+}
+
+#project3 {
+  grid-area: project3;
+}
+
+/*CONTACT SECTION */
+.contact-sect {
+  display: grid;
+  color: var(--main-gray);
+  background-color: var(--main-blue);
+  grid-template-rows: 9fr 1fr;
+  grid-template-areas:
+    "contact"
+    "footer";
+}
+
+.contact {
+  grid-area: contact;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--main-blue);
+  margin-top: 30vh;
+}
+
+.contact h2 {
+  font-size: 4em;
+}
+
+.contact p {
+  font-size: 2em;
+}
+
+.btn {
+  color: var(--main-black);
+  margin: 2vh;
+}
+
+.btn:hover {
+  color: var(--main-gray);
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.5em;
+  padding-bottom: 1vh;
+  align-items: flex-end;
+  border-top: solid var(--main-gray);
+  background-color: var(--main-white);
+}
+
+.footer p a {
+  color: var(--main-gray);
+  text-decoration: none;
+}
+
+.footer p a:hover {
+  color: var(--main-black);
+}
+
+@media (max-width: 600px) {
+  .project-sect {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/*# sourceMappingURL=/portfolio.5d51f785.css.map */

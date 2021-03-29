@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+code {
+    background-color: wheat;
+}
+
+#navbar {
+    position: fixed;
+    height: 100%;
+    width: 10%;
+    border-color: black;
+    border-style: solid;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-doc {
+    width: 90%;
+    padding-left: 15%;
+}
+
+@media (max-width: 600px) {
+    #navbar {
+        width: 100%;
+        position: relative;
+    }
+
+    #main-doc {
+        padding: 5%;
+    }
+}

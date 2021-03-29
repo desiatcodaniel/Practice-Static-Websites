@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Pacifico", cursive;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  color: #181818;
+}
+
+#header-title {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  margin: 0.5vw 0 0.2vw 1vw;
+}
+
+.logo {
+  width: 4vw;
+  height: auto;
+  padding-bottom: 0.1vw;
+  margin: 0.2vw 0 0.2vw 1vw;
+}
+
+.company-name {
+  width: 55vw;
+  font-size: 35px;
+  align-self: flex-end;
+  margin-left: 1vw;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 30vw;
+}
+
+.nav-link {
+  font-size: 20px;
+  margin-bottom: 0.2vw;
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  color: black;
+}
+
+.nav-link:link {
+  color: #181818;
+}
+
+.nav-link:hover {
+  color: #383838;
+}
+
+.container {
+  display: flex;
+  padding-top: 10vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.feature-list {
+  padding: 5vw 0;
+  width: 10vw;
+  margin: 4vh 5vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-list h2 {
+  margin-bottom: 5vh;
+  font-size: 1.2em;
+}
+
+#pricing {
+  height: 100vh;
+  width: 70%;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15vh;
+}
+
+.card {
+  border-color: #383838;
+  border-style: solid;
+  height: 22em;
+  width: 14em;
+  margin: 0.5em;
+  text-align: center;
+}
+
+.card hr {
+  border: 1px solid #383838;
+}
+
+.card img {
+  width: 100%;
+  height: 60%;
+  background-color: transparent;
+}
+
+.card hr {
+  margin: 0;
+}
+
+.btn {
+  background-color: transparent;
+  border-color: #383838;
+  width: 50%;
+}
+
+.btn:hover {
+  background-color: #383838;
+  color: white;
+}
+
+#contact {
+  width: 70%;
+  height: 50vh;
+  padding-top: 5vh;
+  text-align: center;
+}
+
+#form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+.input {
+  width: 30%;
+  margin-top: 1vh;
+}
+
+#comments {
+  height: 12vh;
+}
+
+@media (max-width: 750px) {
+  .logo {
+    display: none;
+  }
+
+  .company-name {
+    align-self: center;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+  }
+
+  .features {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5em;
+    margin-top: 5em;
+  }
+
+  .feature-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+  }
+
+  .feature-list h2 {
+    margin-left: 2em;
+  }
+}
